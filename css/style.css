@@ -1,0 +1,282 @@
+/* Basic Resets & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header */
+.main-header {
+    background-color: #EAAD00; /* The soft, peachy-orange from your design */
+    padding: 0px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo {
+    background-color: white;
+    padding: 10px 60px;
+}
+
+.main-header .logo img {
+    height: 55px;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #fff;
+}
+
+.share-button button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.share-button button:hover {
+    background-color: #eee;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: white; /* The light, creamy beige from your design */
+    padding: 80px 0;
+    min-height: 500px;
+}
+
+.hero-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.1;
+}
+
+.hero-image {
+    flex-shrink: 0;
+    width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Flagship Events Section */
+.flagship-events-section {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.flagship-events-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.event-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.event-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.event-image {
+    flex: 1;
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7DBB4; /* The same peachy-orange as the header */
+    padding: 30px;
+}
+
+.event-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.event-details {
+    flex: 1.5;
+    padding: 40px;
+}
+
+.event-details h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.event-details p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.event-details .read-more {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #4CAF50;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.event-details .read-more:hover {
+    color: #3e8e41;
+}
+
+/* Footer (basic placeholder) */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .main-nav ul {
+        gap: 15px;
+    }
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 50px;
+    }
+    .hero-image {
+        width: 80%;
+    }
+    .flagship-events-section h2 {
+        font-size: 32px;
+    }
+    .event-card,
+    .event-card:nth-child(even) {
+        flex-direction: column;
+    }
+    .event-image {
+        min-width: unset;
+        width: 100%;
+        padding: 20px;
+    }
+    .event-details {
+        padding: 30px;
+    }
+    .event-details h3 {
+        font-size: 28px;
+    }
+    .event-details p {
+        font-size: 16px;
+    }
+}
+
+/* All previous CSS remains the same. Add this new section at the end. */
+
+/*--------------------
+ Hero Animation
+--------------------*/
+.hero-content h1 span {
+    display: block; /* Make each word a block element to animate individually */
+}
+
+@keyframes colorChange {
+    0%, 100% { color: #000; } /* Start and end color (black) */
+    50% { color: #EAAD00; } /* Mid-point color (orange) */
+}
+
+/* Apply the animation with a staggered delay */
+.hero-content h1 span:nth-child(1) {
+    animation: colorChange 4s infinite; /* 4 seconds total duration */
+}
+
+.hero-content h1 span:nth-child(2) {
+    animation: colorChange 4s infinite 1s; /* Starts 1 second after the first */
+}
+
+.hero-content h1 span:nth-child(3) {
+    animation: colorChange 4s infinite 2s; /* Starts 2 seconds after the first */
+}
+
+.hero-content h1 span:nth-child(4) {
+    animation: colorChange 4s infinite 3s; /* Starts 3 seconds after the first */
+}
