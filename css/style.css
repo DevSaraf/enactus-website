@@ -10,58 +10,75 @@
 } */
 /* Blogs Section */
 /* ===== Blogs Section Grid ===== */
-
 .blogs-section {
-    padding: 60px 0;
+    padding: 4rem 1rem;
 }
 
 .blogs-title {
     text-align: center;
-    font-size: 42px;
+    font-size: 2.5 rem;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.blogs-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    color: #555;
+    font-size: 1rem;
 }
 
 .blogs-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 2rem;
 }
 
 .blog-card {
-    background-color: #f8f8f8;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-top: 5px solid #F5C518;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.blog-card h3 {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #000;
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
 }
 
+.blog-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #1f1f1f;
+}
+
+
 .blog-card p {
-    font-size: 16px;
-    color: #666;
+    font-size: 0.95rem;
+    color: #555;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 1.4rem;
 }
 
 .blog-card a {
-    font-weight: 600;
-    color: #000;
     align-self: flex-start;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    text-decoration: none;
+    color: #F5C518;
+    transition: color 0.2s ease;
+}
+.blog-card a:hover {
+    color:  #D4A514;
 }
 
-.blog-card a:hover {
-    color: #EAAD00;
-}
+
 
 /* Tablet */
 @media (max-width: 992px) {
@@ -552,4 +569,27 @@ img {
 
 .contact-form button:hover {
     background-color: #d89e00;
+}
+
+@media (max-width: 480px) {
+    .blogs-title {
+        font-size: 2rem;
+    }
+
+    .blogs-subtitle {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+    }
+
+    .blog-card {
+        padding: 1.4rem;
+    }
+
+    .blog-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .blog-card p {
+        font-size: 0.9rem;
+    }
 }
