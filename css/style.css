@@ -1,4 +1,9 @@
 /* Basic Resets & Global Styles */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -168,7 +173,9 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden; 
 }
+
 .hero-section::before {
     content: "";
     position: absolute;
@@ -202,10 +209,15 @@ img {
     width: 50%;
 }
 
-.hero-image img {
+/* .hero-image img {
     width: 100%;
     max-width: 600px;
+} */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
 }
+
 
 /* Hero Animation */
 .hero-content h1 span {
@@ -487,12 +499,12 @@ img {
     }
 
     .hero-content h1 {
-        font-size: 48px;
+        font-size: 44px;
     }
 
     .hero-image {
-        width: 90%;
-        margin-top: 30px;
+        width: 100%;
+        margin-top: 20px;
     }
 
     /* Make background softer on mobile */
@@ -552,4 +564,17 @@ img {
 
 .contact-form button:hover {
     background-color: #d89e00;
+}
+@media (max-width: 768px) {
+
+    /* Blog cards spacing */
+    .blog-card {
+        margin: 0 15px;
+    }
+
+    /* Container padding refinement */
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
