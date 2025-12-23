@@ -578,3 +578,36 @@ img {
         padding-right: 16px;
     }
 }
+/* ===== Blog Detail Page ===== */
+
+.blog-detail {
+    padding: 60px 0;
+}
+
+.blog-detail h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.blog-meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.blog-detail p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Mobile spacing fix */
+@media (max-width: 768px) {
+    .blog-detail {
+        padding: 40px 0;
+    }
+
+    .blog-detail h1 {
+        font-size: 26px;
+    }
+}
