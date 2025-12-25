@@ -611,3 +611,42 @@ img {
         font-size: 26px;
     }
 }
+.contact-socials-card {
+    background: #ffffff;
+    max-width: 600px;      /* SAME as contact-form */
+    margin: 20px auto;     /* tighter spacing */
+    padding: 25px 40px;    /* visually matches form */
+    border-radius: 10px;   /* same feel as form */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+
+.contact-socials-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;   /* less empty space */
+    flex-wrap: wrap;
+}
+
+
+.social-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #f0b400; /* Enactus yellow */
+    border: 2px solid #f0b400;
+    padding: 10px 22px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #f0b400;
+    color: #000;
+}
