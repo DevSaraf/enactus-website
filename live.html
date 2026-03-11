@@ -14,8 +14,9 @@
         /* ── LIVE PAGE SPECIFIC STYLES ── */
 
         .live-hero {
-            background-color: #EAAD00;
-            padding: 30px 0 0 0;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 36px 0 30px 0;
             text-align: center;
         }
 
@@ -54,7 +55,7 @@
             width: 9px;
             height: 9px;
             border-radius: 50%;
-            background: #EAAD00;
+            background: #e03a2f;
             animation: livepulse 1.4s infinite;
         }
 
@@ -71,7 +72,7 @@
 
         .live-grid {
             display: grid;
-            grid-template-columns: 1fr 320px;
+            grid-template-columns: 1fr;
             gap: 24px;
             align-items: start;
         }
@@ -381,15 +382,6 @@
                     </div>
                 </div>
 
-                <!-- CHAT PANEL -->
-                <div class="chat-panel">
-                    <div class="chat-label">Live Chat</div>
-                    <div id="twitch-chat"></div>
-                    <a href="https://www.twitch.tv/dexdior447" target="_blank" class="twitch-link-btn">
-                        Open Full Stream on Twitch ↗
-                    </a>
-                </div>
-
             </div>
         </div>
     </section>
@@ -424,13 +416,6 @@
             pill.classList.add("online");
             document.getElementById("status-text").textContent = "Live";
         });
-
-        /* Chat */
-        const chatFrame = document.createElement("iframe");
-        chatFrame.src = `https://embed.twitch.tv/embed/v1/?channel=${CHANNEL}&parent=${PARENT}&chat_only=true`;
-        chatFrame.style.cssText = "width:100%;height:100%;border:none;";
-        chatFrame.allowFullscreen = true;
-        document.getElementById("twitch-chat").appendChild(chatFrame);
 
         /* Offline fallback */
         setTimeout(() => {
