@@ -671,3 +671,107 @@ img {
 .announcement-bar a:hover {
     color: #fff;
 }
+
+
+#watch-live {
+    padding: 0 0 50px 0;
+}
+
+.watch-live-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: #000;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.watch-live-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.live-badge-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #EAAD00;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.live-dot-inline {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #000;
+    animation: livepulseinline 1.4s infinite;
+}
+
+@keyframes livepulseinline {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.3; transform: scale(0.6); }
+}
+
+.watch-live-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.watch-live-text p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #aaa;
+    margin: 0;
+}
+
+.watch-live-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #EAAD00;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.15s;
+    flex-shrink: 0;
+}
+
+.watch-live-btn:hover {
+    background: #d89e00;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .watch-live-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+        align-items: center;
+    }
+
+    .live-badge-inline {
+        margin: 0 auto;
+    }
+
+    .watch-live-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
