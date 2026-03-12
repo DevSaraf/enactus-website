@@ -689,6 +689,7 @@ img {
     font-weight: 600;
     text-align: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .watch-live-text {
@@ -773,3 +774,6 @@ img {
         justify-content: center;
     }
 }
+
+
+
