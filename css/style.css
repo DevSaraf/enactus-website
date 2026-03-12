@@ -673,45 +673,62 @@ img {
 }
 
 
+/* ── WATCH LIVE BAR — matches announcement bar style ── */
 #watch-live {
-    padding: 0 0 50px 0;
+    padding: 0;
 }
 
 .watch-live-card {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    background: #000;
-    border-radius: 10px;
-    padding: 30px 40px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    justify-content: center;
+    gap: 16px;
+    background-color: #000;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 .watch-live-text {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;  /* inline, not stacked */
+}
+
+.watch-live-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+/* hide the subtitle paragraph to keep it slim */
+.watch-live-text p {
+    display: none;
 }
 
 .live-badge-inline {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
+    gap: 6px;
     background: #EAAD00;
     color: #000;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    padding: 5px 14px;
+    padding: 4px 12px;
     border-radius: 20px;
-    width: fit-content;
 }
 
 .live-dot-inline {
-    width: 8px; height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: #000;
     animation: livepulseinline 1.4s infinite;
@@ -722,56 +739,37 @@ img {
     50%       { opacity: 0.3; transform: scale(0.6); }
 }
 
-.watch-live-text h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
-    margin: 0;
-}
-
-.watch-live-text p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    color: #aaa;
-    margin: 0;
-}
-
 .watch-live-btn {
     display: inline-flex;
     align-items: center;
-    background: #EAAD00;
-    color: #000;
+    gap: 6px;
+    background: none;
+    color: #EAAD00;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 15px;
-    padding: 14px 32px;
-    border-radius: 8px;
-    text-decoration: none;
+    text-decoration: underline;
+    padding: 0;
+    border-radius: 0;
+    transition: color 0.2s;
     white-space: nowrap;
-    transition: background 0.2s, transform 0.15s;
-    flex-shrink: 0;
 }
 
 .watch-live-btn:hover {
-    background: #d89e00;
-    transform: translateY(-2px);
+    color: #fff;
+    background: none;
+    transform: none;
 }
 
 @media (max-width: 768px) {
     .watch-live-card {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         text-align: center;
-        padding: 24px 20px;
-        align-items: center;
-    }
-
-    .live-badge-inline {
-        margin: 0 auto;
     }
 
     .watch-live-btn {
-        width: 100%;
+        width: auto;
         justify-content: center;
     }
 }
